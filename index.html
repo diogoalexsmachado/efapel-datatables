@@ -34,20 +34,20 @@
     
     <!-- Initialize DataTables -->
     <script>
-      $(document).ready(function() {
-        fetch('efapel.json')
-          .then(response => response.json())
-          .then(data => {
-            // Loop through data and add rows to table
-            data.forEach(function(item) {
-              $('#example tbody').append(`<tr><td>${item.ref}</td><td>${item.desc}</td><td>${item.pvp}</td><td>${item.unit}</td><td>${item.emb}</td><td>${item.ean}</td></tr>`);
-            });
-            
-            // Initialize DataTables on the table
-            $('#example').DataTable();
-          })
-          .catch(error => console.error(error));
-      });
+    $(document).ready(function() {
+      fetch('efapel.json')
+        .then(response => response.json())
+        .then(data => {
+          // Loop through data and add rows to table
+          data.forEach(function(item) {
+            $('#example tbody').append(`<tr><td>${item.FIELD1}</td><td>${item.FIELD2}</td><td>${item.FIELD3}</td><td>${item.FIELD4}</td><td>${item.FIELD5}</td><td>${item.FIELD6}</td></tr>`);
+          });
+          
+          // Initialize DataTables on the table
+          $('#example').DataTable();
+        })
+        .catch(error => console.error(error));
+    });
     </script>
   </body>
 </html>
